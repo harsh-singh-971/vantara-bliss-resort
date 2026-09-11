@@ -18,6 +18,7 @@ import FloatingCTAs from './components/FloatingCTAs.jsx';
 import BookingModal from './components/BookingModal.jsx';
 import { CalendarCheck, MessageSquare, Compass, Phone } from 'lucide-react';
 import { propertyData } from './data/propertyData.js';
+import { getAssetUrl } from './utils/assets.js';
 
 export default function App() {
   const [bookingModalOpen, setBookingModalOpen] = useState(false);
@@ -90,7 +91,7 @@ export default function App() {
           <div style={{
             position: 'absolute',
             inset: 0,
-            backgroundImage: 'url("/images/gdrive/gdrive_img_10.jpg")',
+            backgroundImage: `url("${getAssetUrl('images/gdrive/gdrive_img_10.jpg')}")`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             opacity: 0.38,

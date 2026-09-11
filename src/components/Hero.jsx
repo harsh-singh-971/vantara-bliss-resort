@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from 'react';
 import { CalendarCheck, Compass, MessageSquare, ShieldCheck, Star } from 'lucide-react';
 import { propertyData } from '../data/propertyData.js';
+import { getAssetUrl } from '../utils/assets.js';
 
 export default function Hero({ onOpenBooking }) {
   const [activeSlide, setActiveSlide] = useState(0);
 
   const heroSlides = [
     {
-      url: "/images/gdrive/gdrive_img_08.jpg",
+      url: getAssetUrl("images/gdrive/gdrive_img_08.jpg"),
       caption: "Authentic Handcrafted Wooden Chalet"
     },
     {
-      url: "/images/gdrive/gdrive_img_10.jpg",
+      url: getAssetUrl("images/gdrive/gdrive_img_10.jpg"),
       caption: "Double-Decker Balconies with Valley Vistas"
     },
     {
-      url: "/images/gdrive/gdrive_img_11.jpg",
+      url: getAssetUrl("images/gdrive/gdrive_img_11.jpg"),
       caption: "Lantern-Lined Pine Forest Walkway"
     },
     {
-      url: "/images/gdrive/gdrive_img_14.jpg",
+      url: getAssetUrl("images/gdrive/gdrive_img_14.jpg"),
       caption: "Warm Wooden Interiors & Tufted Suites"
     }
   ];

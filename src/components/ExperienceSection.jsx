@@ -1,6 +1,7 @@
 import React from 'react';
 import { Laptop, Flame, Trees, Coffee, ArrowRight } from 'lucide-react';
 import { propertyData } from '../data/propertyData.js';
+import { getAssetUrl } from '../utils/assets.js';
 
 export default function ExperienceSection({ onOpenBooking }) {
   const experiences = [
@@ -8,21 +9,21 @@ export default function ExperienceSection({ onOpenBooking }) {
       title: "Himalayan Workation Sanctuary",
       tagline: "Work · Vacation · Staycation",
       description: "Fast fiber Wi-Fi, comfortable daybeds, and quiet balcony nooks that turn your workdays into an inspiring, scenic retreat without screen fatigue.",
-      image: "/images/gdrive/gdrive_img_05.jpg",
+      image: getAssetUrl("images/gdrive/gdrive_img_05.jpg"),
       icon: Laptop
     },
     {
       title: "Evening Bonfires & Star Gazing",
       tagline: "Crackling Warmth & Acoustic Nights",
       description: "When the crisp mountain breeze settles, gather around the crackling bonfire on our lawn with gentle melodies, hot beverages, and endless stars.",
-      image: "/images/gdrive/gdrive_img_14.jpg",
+      image: getAssetUrl("images/gdrive/gdrive_img_14.jpg"),
       icon: Flame
     },
     {
       title: "Morning Pine Forest Walks",
       tagline: "Nature's Purest Breath",
       description: "Step directly onto pine-covered paths at sunrise. Listen to Himalayan birds and feel the calm dew before returning for a hot breakfast.",
-      image: "/images/gdrive/gdrive_img_03.jpg",
+      image: getAssetUrl("images/gdrive/gdrive_img_03.jpg"),
       icon: Trees
     }
   ];

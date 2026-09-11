@@ -1,3 +1,5 @@
+import { getAssetUrl } from '../utils/assets.js';
+
 // Centralized factual business data for Vantara Bliss Resort
 // Sourced from live website (https://vantarabliss.com/) and Google Drive asset library
 
@@ -445,3 +447,13 @@ export const propertyData = {
     fallback: "I want to make sure you get the most accurate, up-to-date information. Please connect directly with our property management team at +91 9220655933 or tap below to chat on WhatsApp."
   }
 };
+
+// Automatically resolve asset paths with Vite base path for GitHub Pages and production
+propertyData.logoUrl = getAssetUrl(propertyData.logoUrl);
+propertyData.rooms.forEach(room => {
+  room.images = room.images.map(img => getAssetUrl(img));
+});
+propertyData.gallery.forEach(item => {
+  item.url = getAssetUrl(item.url);
+});
+

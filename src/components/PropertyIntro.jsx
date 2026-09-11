@@ -1,6 +1,7 @@
 import React from 'react';
 import { Heart, Leaf, Sparkles, CheckCircle2, ArrowRight } from 'lucide-react';
 import { propertyData } from '../data/propertyData.js';
+import { getAssetUrl } from '../utils/assets.js';
 
 export default function PropertyIntro({ onOpenBooking }) {
   return (
@@ -72,7 +73,7 @@ export default function PropertyIntro({ onOpenBooking }) {
               border: '1px solid rgba(197, 168, 128, 0.25)' 
             }}>
               <img 
-                src="/images/gdrive/gdrive_img_02.jpg" 
+                src={getAssetUrl("images/gdrive/gdrive_img_02.jpg")} 
                 alt="Vantara Bliss Wooden Chalet Balcony" 
                 style={{ width: '100%', height: '520px', objectFit: 'cover', display: 'block' }}
                 loading="lazy"
